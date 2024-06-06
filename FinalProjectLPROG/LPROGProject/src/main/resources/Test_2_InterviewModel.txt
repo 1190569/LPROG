@@ -1,0 +1,15 @@
+InterviewModel SoftwareEngineerInterview (
+    Title: "Software Engineer Interview"
+    Description: "Interview questions for software engineering position"
+    Questions: (
+        ("Best programming languages" (MultipleChoice, 10)),
+        ("Java proficiency" (NumericScale, 10)),
+        ("Has Professional experience in the area" (TrueFalse, 10)),
+        ("Last professional experience in the area" (Date, 3)),
+        ("Expected Income" (IntegerNumber, 2)),
+        ("Problem-solving skills" (NumericScale, 20)),
+        ("Experience with version control systems" (ShortTextAnswer, 5)),
+        ("Understanding of object-oriented programming concepts" (ShortTextAnswer, 20)),
+        ("System design experience" (ShortTextAnswer, 20))
+    )
+)

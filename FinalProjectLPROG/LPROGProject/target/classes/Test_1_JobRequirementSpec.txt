@@ -1,0 +1,9 @@
+JobRequirementSpec SoftwareEngineer (
+    Title: "Software Engineer"
+    Description: "Job requirements for a software engineer position"
+    Requirements: (
+        "Bachelor's degree in Computer Science";
+        "Proficiency in Java, C, and Python";
+        "Experience with Agile development methodologies"
+    )
+)
