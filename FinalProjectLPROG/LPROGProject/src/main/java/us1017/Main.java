@@ -1,14 +1,13 @@
 package us1017;
 
-
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
-import us1017.grammar.grammar.InterviewResponsesLexer;
-import us1017.grammar.grammar.InterviewResponsesParser;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+
+import us1017.grammar.InterviewResponsesLexer;
+import us1017.grammar.InterviewResponsesParser;
 
 public class Main {
     public static void main(String[] args) {

@@ -10,7 +10,8 @@ INT      : [0-9]+ ;
 STRING   : '"' ~["\r\n]* '"' ;
 TRUE     : 'True' ;
 FALSE    : 'False' ;
-HYPEN    : '-' ;
+HYPHEN   : '-' ;
+FRACTION : INT '/' INT ;  // Definiert einen neuen Token für Brüche
 
 // Ignore spaces, tabs, and line breaks
 WS       : [ \t\r\n]+ -> skip ;
@@ -36,12 +37,13 @@ questionType : 'TrueFalse'
              | 'Time'
              | 'NumericScale' ;
 
-response : STRING
+response : FALSE
+         | FRACTION
          | INT
          | date
          | time
          | TRUE
-         | FALSE ;
+         | STRING ;
 
-date : INT HYPEN INT HYPEN INT ;  // Format: YYYY-MM-DD
-time : INT HYPEN INT ;  // Format: HH:MM
+date : INT HYPHEN INT HYPHEN INT ;  // Format: YYYY-MM-DD
+time : INT HYPHEN INT ;  // Format: HH:MM
