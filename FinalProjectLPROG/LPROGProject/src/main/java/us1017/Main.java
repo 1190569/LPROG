@@ -2,13 +2,13 @@ package us1017;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
+import us1017.grammar.InterviewResponsesLexer;
+import us1017.grammar.InterviewResponsesParser;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
-import us1017.grammar.InterviewResponsesLexer;
-import us1017.grammar.InterviewResponsesParser;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,6 +23,7 @@ public class Main {
             InterviewResponsesParser parser = new InterviewResponsesParser(tokens);
 
             parser.removeErrorListeners();
+
             parser.addErrorListener(new BaseErrorListener() {
                 @Override
                 public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e) {
@@ -36,7 +37,7 @@ public class Main {
             InterviewResponsesListener listener = new InterviewResponsesListener();
             walker.walk(listener, tree);
 
-            if (!errorFlag.hasErrors) {
+            if (!errorFlag.hasErrors&&!listener.errormsg) {
                 // Keine Fehler, Datei speichern
                 saveFile(content, "C:\\Users\\jerem\\OneDrive - bwedu\\Studium\\7tes Semester\\LPROG\\05_SprintC\\LPROG\\FinalProjectLPROG\\LPROGProject\\src\\main\\resources\\Saved_InterviewModel");
                 System.out.println("File saved successfully.");

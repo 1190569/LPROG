@@ -4,6 +4,8 @@ import us1017.grammar.InterviewResponsesBaseListener;
 import us1017.grammar.InterviewResponsesParser;
 
 public class InterviewResponsesListener extends InterviewResponsesBaseListener {
+    public boolean errormsg = false;
+
     @Override
     public void enterQuestionResponse(InterviewResponsesParser.QuestionResponseContext ctx) {
         String question = ctx.STRING().getText().replace("\"", "");
@@ -17,6 +19,7 @@ public class InterviewResponsesListener extends InterviewResponsesBaseListener {
             String detectedType = detectType(answer);
             String error = generateErrorMessage(question, expectedType, detectedType);
             System.err.println(error);
+            errormsg = true;
         } else {
             System.out.println("Answer: " + answer);
             System.out.println("Answertype: " + detectType(answer));

@@ -11,7 +11,7 @@ STRING   : '"' ~["\r\n]* '"' ;
 TRUE     : 'True' ;
 FALSE    : 'False' ;
 HYPHEN   : '-' ;
-FRACTION : INT '/' INT ;  // Definiert einen neuen Token für Brüche
+BACKSLASH: '/' ;
 
 // Ignore spaces, tabs, and line breaks
 WS       : [ \t\r\n]+ -> skip ;
@@ -38,12 +38,13 @@ questionType : 'TrueFalse'
              | 'NumericScale' ;
 
 response : FALSE
-         | FRACTION
+         | fraction
          | INT
          | date
          | time
          | TRUE
          | STRING ;
 
+fraction: INT BACKSLASH INT  ;
 date : INT HYPHEN INT HYPHEN INT ;  // Format: YYYY-MM-DD
 time : INT HYPHEN INT ;  // Format: HH:MM
