@@ -11,6 +11,7 @@ public class InterviewResponsesListener extends InterviewResponsesBaseListener {
         String expectedType = ctx.questionType().getText();
 
         System.out.println("Checking response for question: " + question);
+        System.out.println("Type of question: " + expectedType);
 
         if (!validateAnswerType(answer, expectedType)) {
             String detectedType = detectType(answer);
@@ -18,11 +19,15 @@ public class InterviewResponsesListener extends InterviewResponsesBaseListener {
             System.err.println(error);
         } else {
             System.out.println("Answer: " + answer);
+            System.out.println("Answertype: " + detectType(answer));
         }
 
         System.out.println();
     }
 
+    public void enterPlugin(InterviewResponsesParser.PluginContext ctx) {
+        System.out.println("Start Checking");
+    }
     @Override
     public void exitPlugin(InterviewResponsesParser.PluginContext ctx) {
         System.out.println("Checking finished.");
@@ -31,13 +36,15 @@ public class InterviewResponsesListener extends InterviewResponsesBaseListener {
     private boolean validateAnswerType(String answer, String type) {
         switch (type) {
             case "NumericScale":
-                return answer.matches("\\d+\\/\\d+");
+                return answer.matches("\\d+");
             case "IntegerNumber":
                 return answer.matches("\\d+");
             case "Date":
                 return answer.matches("\\d{4}-\\d{2}-\\d{2}");
             case "TrueFalse":
                 return answer.equals("True") || answer.equals("False");
+            case "MultipleChoice":
+                return answer.contains(",");
             case "ShortTextAnswer":
                 return true;  // Jeglicher Text ist erlaubt
             default:
@@ -47,9 +54,9 @@ public class InterviewResponsesListener extends InterviewResponsesBaseListener {
 
     private String detectType(String answer) {
         if (answer.matches("\\d+")) {
+            return "a numeric scale";
+        } else if (answer.matches("\\d+")) {
             return "an integer number";
-        } else if (answer.matches("\\d+\\/\\d+")) {
-            return "a fraction";
         } else if (answer.matches("\\d{4}-\\d{2}-\\d{2}")) {
             return "a date (YYYY-MM-DD)";
         } else if (answer.equals("True") || answer.equals("False")) {
