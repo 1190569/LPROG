@@ -1,5 +1,6 @@
 package us1018;
 
+import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.time.LocalDate;
@@ -60,6 +61,7 @@ public class InterviewEvaluator extends InterviewModel_2_updatedBaseVisitor<Doub
         String[] answers = answer.split(", ");
         double score = 0;
         for (String ans : answers) {
+            ans = ans.split("\\. ")[1];
             if (evaluationRules.containsKey(ans)) {
                 score += evaluationRules.get(ans);
             } else {
@@ -70,6 +72,7 @@ public class InterviewEvaluator extends InterviewModel_2_updatedBaseVisitor<Doub
     }
 
     private Double evaluateNumericScale(String answer, int maxPoints) {
+        answer = answer.split("/")[0];
         return Math.min(Double.valueOf(answer), maxPoints);
     }
 
@@ -110,6 +113,7 @@ public class InterviewEvaluator extends InterviewModel_2_updatedBaseVisitor<Doub
     }
 
     private Double evaluateSingleChoice(String answer, int maxPoints) {
+        answer = answer.split("\\. ")[1];
         return answer.equals("A") ? (double) maxPoints : 0.0;
     }
 
@@ -118,10 +122,11 @@ public class InterviewEvaluator extends InterviewModel_2_updatedBaseVisitor<Doub
     }
 
     private Double evaluateTime(String answer, int maxPoints) {
-        int intValue = Integer.parseInt(answer);
-        if (intValue == 8 || intValue == 9) {
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+        LocalTime answerTime = LocalTime.parse(answer, timeFormatter);
+        if (answerTime.getHour() == 8 || answerTime.getHour() == 9) {
             return (double) maxPoints;
-        } else if (intValue >= 5 && intValue < 8) {
+        } else if (answerTime.getHour() >= 5 && answerTime.getHour() < 8) {
             return maxPoints * 0.5;
         } else {
             return 0.0;
