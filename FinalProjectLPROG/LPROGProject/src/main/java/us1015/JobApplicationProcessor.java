@@ -71,7 +71,7 @@ public class JobApplicationProcessor {
         JobApplicationProcessor processor = new JobApplicationProcessor(verifier);
 
         // Read applications from the file
-        List<JobApplication> applications = readApplicationsFromFile("Test_4JobApplication.txt"); //TODO you need to change this file path
+        List<JobApplication> applications = readApplicationsFromFile("Test_4JobApplication.txt"); //TODO - Path needs to be changed
 
         // Debug: print the applications read
         for (JobApplication application : applications) {
