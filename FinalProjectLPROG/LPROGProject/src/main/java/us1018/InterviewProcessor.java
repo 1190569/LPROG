@@ -10,7 +10,7 @@ import java.io.IOException;
 public class InterviewProcessor {
     public static void main(String[] args) {
         try {
-            ANTLRInputStream input = new ANTLRInputStream(new FileInputStream("FinalProjectLPROG/LPROGProject/src/main/resources/Test_3_InterviewModel_with_answers"));
+            ANTLRInputStream input = new ANTLRInputStream(new FileInputStream("C:\\Users\\greta\\LPROG\\FinalProjectLPROG\\LPROGProject\\src\\main\\resources\\Test_3_InterviewModel_with_answers"));
             InterviewModel_2_updatedLexer lexer = new InterviewModel_2_updatedLexer(input);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             InterviewModel_2_updatedParser parser = new InterviewModel_2_updatedParser(tokens);
