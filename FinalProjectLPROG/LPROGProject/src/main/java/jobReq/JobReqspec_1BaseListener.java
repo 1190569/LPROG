@@ -53,13 +53,49 @@ public class JobReqspec_1BaseListener implements JobReqspec_1Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterReqItem(JobReqspec_1Parser.ReqItemContext ctx) { }
+	@Override public void enterDegreeArea(JobReqspec_1Parser.DegreeAreaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitReqItem(JobReqspec_1Parser.ReqItemContext ctx) { }
+	@Override public void exitDegreeArea(JobReqspec_1Parser.DegreeAreaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDegreeLevel(JobReqspec_1Parser.DegreeLevelContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDegreeLevel(JobReqspec_1Parser.DegreeLevelContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTools(JobReqspec_1Parser.ToolsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTools(JobReqspec_1Parser.ToolsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterYearsOfExperience(JobReqspec_1Parser.YearsOfExperienceContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitYearsOfExperience(JobReqspec_1Parser.YearsOfExperienceContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

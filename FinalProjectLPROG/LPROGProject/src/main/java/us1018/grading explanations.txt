@@ -1,0 +1,32 @@
+- the multiple choice question "Best programming languages" 
+	if Python is in the answer 2 points;
+	if JavaScript is in the answer another 2 points;
+	if Java is in the answer another 2 points;
+	if C# is in the answer another 2 points;
+	if other languages than the ones mentioned above then another 2 points;
+- the numeric scale question
+	the points equal to the answer;
+	unless the answer is bigger than max points, then its max points
+- true or false question "Has Professional experience in the area"
+	if true then max points;
+	if false then 0 points;
+- the date question "Last professional experience in the area"
+	if the answer date is less than 1 year ago from today then max points;
+	else 1 point (for having professional experience)
+- the integer number question 
+	if the answer is between 1500 and 2500 then 100% of points
+	if the answer is between lower than 1500 then 50% of points
+	else 0 points
+- the short text questions
+	if they are not three word answers then max points.
+	else 1 point
+- single choice question:
+	if they select option A, then max points
+	else no points
+- decimal number questions
+	the points equal to the answer;
+	unless the answer is bigger than max points, then its max points
+- time questions
+	if answer is 8 or 9 then 100% of max score
+	if answer is between 5 and 8 then 50% of max
+

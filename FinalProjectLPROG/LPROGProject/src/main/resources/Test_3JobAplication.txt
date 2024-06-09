@@ -1,0 +1,9 @@
+JobRequirementSpec SoftwareEngineer (
+    Title: "Software Engineer",
+    Attributes: (
+        Degree area: "Computer Science", "Software Engineering",
+        Degree level: "Bachelor's", "Master's",
+        Tools: "Java", "Python", "Git",
+        Years of experience: 2
+    )
+)
