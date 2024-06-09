@@ -89,6 +89,18 @@ public class InterviewResponsesBaseListener implements InterviewResponsesListene
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterBooleanResponse(InterviewResponsesParser.BooleanResponseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBooleanResponse(InterviewResponsesParser.BooleanResponseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterFraction(InterviewResponsesParser.FractionContext ctx) { }
 	/**
 	 * {@inheritDoc}

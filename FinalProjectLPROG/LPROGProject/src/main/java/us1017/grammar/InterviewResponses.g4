@@ -11,7 +11,7 @@ STRING   : '"' ~["\r\n]* '"' ;
 TRUE     : 'True' ;
 FALSE    : 'False' ;
 HYPHEN   : '-' ;
-BACKSLASH: '/' ;
+SLASH: '/' ;
 
 // Ignore spaces, tabs, and line breaks
 WS       : [ \t\r\n]+ -> skip ;
@@ -31,20 +31,20 @@ questionType : 'TrueFalse'
              | 'ShortTextAnswer'
              | 'SingleChoice'
              | 'MultipleChoice'
+             | 'NumericScale'
              | 'IntegerNumber'
              | 'DecimalNumber'
              | 'Date'
-             | 'Time'
-             | 'NumericScale' ;
+             | 'Time';
 
-response : FALSE
+response : booleanResponse
          | fraction
-         | INT
          | date
          | time
-         | TRUE
+         | INT
          | STRING ;
 
-fraction: INT BACKSLASH INT  ;
+booleanResponse : TRUE | FALSE;
+fraction : INT SLASH INT  ;
 date : INT HYPHEN INT HYPHEN INT ;  // Format: YYYY-MM-DD
-time : INT HYPHEN INT ;  // Format: HH:MM
+time : INT COLON INT ;  // Format: HH:MM

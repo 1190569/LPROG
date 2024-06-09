@@ -68,6 +68,16 @@ public interface InterviewResponsesListener extends ParseTreeListener {
 	 */
 	void exitResponse(InterviewResponsesParser.ResponseContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link InterviewResponsesParser#booleanResponse}.
+	 * @param ctx the parse tree
+	 */
+	void enterBooleanResponse(InterviewResponsesParser.BooleanResponseContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link InterviewResponsesParser#booleanResponse}.
+	 * @param ctx the parse tree
+	 */
+	void exitBooleanResponse(InterviewResponsesParser.BooleanResponseContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link InterviewResponsesParser#fraction}.
 	 * @param ctx the parse tree
 	 */

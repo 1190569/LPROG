@@ -2,12 +2,15 @@ InterviewModel SoftwareEngineerInterview (
     Title: "Software Engineer Interview"
     Description: "Interview questions for software engineering position"
     Questions: (
-        ("Best programming languages" (MultipleChoice, 10)): "Python, Java, C++",
-        ("Java proficiency" (NumericScale, 10)): "8",
+        ("Best programming languages" (MultipleChoice, 10)): "1. Python, 2. C, 3. C++",
+        ("Best programming language" (SingleChoice, 10)): "3. C++",
+        ("Java proficiency" (NumericScale, 10)): "8/10",
+        ("Problem-solving skills" (NumericScale, 20)): "5/10",
         ("Has Professional experience in the area" (TrueFalse, 10)): "True",
         ("Last professional experience in the area" (Date, 3)): "2023-05-15",
+        ("Preferred start of work" (Time, 3)): "08:00",
         ("Expected Income" (IntegerNumber, 2)): "70000",
-        ("Problem-solving skills" (NumericScale, 20)): "18",
+        ("1.5*1.5?" (DecimalNumber, 3)): "2.25",
         ("Experience with version control systems" (ShortTextAnswer, 5)): "Extensive experience with Git and SVN.",
         ("Understanding of object-oriented programming concepts" (ShortTextAnswer, 20)): "Strong understanding, including concepts like inheritance, polymorphism, encapsulation, and abstraction.",
         ("System design experience" (ShortTextAnswer, 20)): "Experience designing scalable systems, including microservices architecture and distributed systems."

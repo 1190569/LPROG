@@ -60,6 +60,13 @@ public class InterviewResponsesBaseVisitor<T> extends AbstractParseTreeVisitor<T
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitBooleanResponse(InterviewResponsesParser.BooleanResponseContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitFraction(InterviewResponsesParser.FractionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}

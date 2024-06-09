@@ -47,6 +47,12 @@ public interface InterviewResponsesVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitResponse(InterviewResponsesParser.ResponseContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link InterviewResponsesParser#booleanResponse}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBooleanResponse(InterviewResponsesParser.BooleanResponseContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link InterviewResponsesParser#fraction}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

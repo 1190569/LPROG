@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 
 public class Main {
     public static void main(String[] args) {
-        String filePath = "C:\\Users\\jerem\\OneDrive - bwedu\\Studium\\7tes Semester\\LPROG\\05_SprintC\\02_Project_Kollegen\\FinalProjectLPROG\\LPROGProject\\src\\main\\resources\\Test_3_InterviewModel_with_answers";
+        String filePath = "C:\\Users\\jerem\\OneDrive - bwedu\\Studium\\7tes Semester\\LPROG\\05_SprintC\\Ursprung Text_3 - Kopie.txt";
         ErrorFlag errorFlag = new ErrorFlag(false);  // Using the wrapper class
 
         try {
@@ -34,7 +34,7 @@ public class Main {
 
             ParseTree tree = parser.plugin();
             ParseTreeWalker walker = new ParseTreeWalker();
-            InterviewResponsesListener listener = new InterviewResponsesListener();
+            InterviewResponseListener listener = new InterviewResponseListener();
             walker.walk(listener, tree);
 
             if (!errorFlag.hasErrors&&!listener.errormsg) {
