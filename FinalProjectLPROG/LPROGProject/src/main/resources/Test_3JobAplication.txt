@@ -1,7 +1,6 @@
 JobRequirementSpec SoftwareEngineer (
     Title: "Software Engineer",
-    Description: "Description of software engineer role",
-    Requirements: (
+    Attributes: (
         Degree area: "Computer Science", "Software Engineering",
         Degree level: "Bachelor's", "Master's",
         Tools: "Java", "Python", "Git",

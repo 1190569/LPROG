@@ -1,101 +1,101 @@
-// Generated from JobReqspec_1.g4 by ANTLR 4.13.1
-package jobReq;
+// Generated from JobAplication.g4 by ANTLR 4.13.1
+package jobAP;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 /**
- * This class provides an empty implementation of {@link JobReqspec_1Listener},
+ * This class provides an empty implementation of {@link JobAplicationListener},
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
 @SuppressWarnings("CheckReturnValue")
-public class JobReqspec_1BaseListener implements JobReqspec_1Listener {
+public class JobAplicationBaseListener implements JobAplicationListener {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPlugin(JobReqspec_1Parser.PluginContext ctx) { }
+	@Override public void enterPlugin(JobAplicationParser.PluginContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPlugin(JobReqspec_1Parser.PluginContext ctx) { }
+	@Override public void exitPlugin(JobAplicationParser.PluginContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterJobReqParams(JobReqspec_1Parser.JobReqParamsContext ctx) { }
+	@Override public void enterJobReqParams(JobAplicationParser.JobReqParamsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitJobReqParams(JobReqspec_1Parser.JobReqParamsContext ctx) { }
+	@Override public void exitJobReqParams(JobAplicationParser.JobReqParamsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterReqList(JobReqspec_1Parser.ReqListContext ctx) { }
+	@Override public void enterAttrList(JobAplicationParser.AttrListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitReqList(JobReqspec_1Parser.ReqListContext ctx) { }
+	@Override public void exitAttrList(JobAplicationParser.AttrListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDegreeArea(JobReqspec_1Parser.DegreeAreaContext ctx) { }
+	@Override public void enterDegreeArea(JobAplicationParser.DegreeAreaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDegreeArea(JobReqspec_1Parser.DegreeAreaContext ctx) { }
+	@Override public void exitDegreeArea(JobAplicationParser.DegreeAreaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDegreeLevel(JobReqspec_1Parser.DegreeLevelContext ctx) { }
+	@Override public void enterDegreeLevel(JobAplicationParser.DegreeLevelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDegreeLevel(JobReqspec_1Parser.DegreeLevelContext ctx) { }
+	@Override public void exitDegreeLevel(JobAplicationParser.DegreeLevelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTools(JobReqspec_1Parser.ToolsContext ctx) { }
+	@Override public void enterTools(JobAplicationParser.ToolsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTools(JobReqspec_1Parser.ToolsContext ctx) { }
+	@Override public void exitTools(JobAplicationParser.ToolsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterYearsOfExperience(JobReqspec_1Parser.YearsOfExperienceContext ctx) { }
+	@Override public void enterYearsOfExperience(JobAplicationParser.YearsOfExperienceContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitYearsOfExperience(JobReqspec_1Parser.YearsOfExperienceContext ctx) { }
+	@Override public void exitYearsOfExperience(JobAplicationParser.YearsOfExperienceContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

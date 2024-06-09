@@ -38,13 +38,43 @@ public interface JobReqspec_1Listener extends ParseTreeListener {
 	 */
 	void exitReqList(JobReqspec_1Parser.ReqListContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link JobReqspec_1Parser#reqItem}.
+	 * Enter a parse tree produced by {@link JobReqspec_1Parser#degreeArea}.
 	 * @param ctx the parse tree
 	 */
-	void enterReqItem(JobReqspec_1Parser.ReqItemContext ctx);
+	void enterDegreeArea(JobReqspec_1Parser.DegreeAreaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link JobReqspec_1Parser#reqItem}.
+	 * Exit a parse tree produced by {@link JobReqspec_1Parser#degreeArea}.
 	 * @param ctx the parse tree
 	 */
-	void exitReqItem(JobReqspec_1Parser.ReqItemContext ctx);
+	void exitDegreeArea(JobReqspec_1Parser.DegreeAreaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link JobReqspec_1Parser#degreeLevel}.
+	 * @param ctx the parse tree
+	 */
+	void enterDegreeLevel(JobReqspec_1Parser.DegreeLevelContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link JobReqspec_1Parser#degreeLevel}.
+	 * @param ctx the parse tree
+	 */
+	void exitDegreeLevel(JobReqspec_1Parser.DegreeLevelContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link JobReqspec_1Parser#tools}.
+	 * @param ctx the parse tree
+	 */
+	void enterTools(JobReqspec_1Parser.ToolsContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link JobReqspec_1Parser#tools}.
+	 * @param ctx the parse tree
+	 */
+	void exitTools(JobReqspec_1Parser.ToolsContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link JobReqspec_1Parser#yearsOfExperience}.
+	 * @param ctx the parse tree
+	 */
+	void enterYearsOfExperience(JobReqspec_1Parser.YearsOfExperienceContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link JobReqspec_1Parser#yearsOfExperience}.
+	 * @param ctx the parse tree
+	 */
+	void exitYearsOfExperience(JobReqspec_1Parser.YearsOfExperienceContext ctx);
 }
