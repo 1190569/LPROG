@@ -1,9 +1,9 @@
 InterviewModel SoftwareEngineerInterview (
-    Title: "Software Engineer Interview"
-    Description: "Interview questions for software engineering position"
+    Title: " Answers Software Engineer Interview"
+    Description: "Interview questions for software engineering position with answers"
     Questions: (
-        ("Best programming languages" (MultipleChoice, 10)): "1. Python, 2. C, 3. C++",
-        ("Best programming language" (SingleChoice, 10)): "3. C++",
+        ("Best programming languages" (MultipleChoice, 10)): "1. Python, 2. Java, 3. C",
+        ("Best programming language" (SingleChoice, 10)): "3. C",
         ("Java proficiency" (NumericScale, 10)): "8/10",
         ("Problem-solving skills" (NumericScale, 20)): "5/10",
         ("Has Professional experience in the area" (TrueFalse, 10)): "True",

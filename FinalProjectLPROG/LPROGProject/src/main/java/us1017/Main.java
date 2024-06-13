@@ -24,12 +24,14 @@ public class Main {
      */
     public static void main(String[] args) {
         //TODO - Path needs to be changed
-        String filePath = "C:\\Users\\jerem\\OneDrive - bwedu\\Studium\\7tes Semester\\LPROG\\05_SprintC\\LPROG\\FinalProjectLPROG\\LPROGProject\\src\\main\\resources\\Test_3_InterviewModel_with_answers";
+        String filePathread = "C:\\Users\\jerem\\OneDrive - bwedu\\Studium\\7tes Semester\\LPROG\\05_SprintC\\LPROG\\FinalProjectLPROG\\LPROGProject\\src\\main\\resources\\Test_3_InterviewModel_with_answers";
+        String filePathwrite = "C:\\Users\\jerem\\OneDrive - bwedu\\Studium\\7tes Semester\\LPROG\\05_SprintC\\LPROG\\FinalProjectLPROG\\LPROGProject\\src\\main\\resources\\Saved_InterviewModel";
+
         ErrorFlag errorFlag = new ErrorFlag(false);  // Using the wrapper class
 
         try {
             // Read file content
-            String content = new String(Files.readAllBytes(Paths.get(filePath)));
+            String content = new String(Files.readAllBytes(Paths.get(filePathread)));
 
             ANTLRInputStream input = new ANTLRInputStream(content);
             InterviewResponsesLexer lexer = new InterviewResponsesLexer(input);
@@ -57,7 +59,7 @@ public class Main {
             if (!errorFlag.hasErrors&&!listener.errormsg) {
                 // No errors, save data
                 //TODO - Path needs to be changed
-                saveFile(content, filePath);
+                saveFile(content, filePathwrite);
                 System.out.println("\nFile saved successfully.");
             }
         } catch (IOException e) {
