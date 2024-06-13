@@ -102,6 +102,8 @@ public class InterviewResponseListener extends InterviewResponsesBaseListener {
             return "a time (HH:MM)";
         } else if (answer.equals("True") || answer.equals("False")) {
             return "a boolean ('True' or 'False')";
+        } else if (answer.matches(".*(1\\.|2\\.|3\\.|4\\.|5\\.).*")){
+                return "a single/ multiple choice";
         } else {
             return "text";
         }
