@@ -25,7 +25,7 @@ interviewParams : 'Title' COLON STRING
 
 questionList : LPAREN questionResponse (COMMA questionResponse)* RPAREN ;
 
-questionResponse : LPAREN STRING LPAREN questionType COMMA INT RPAREN RPAREN COLON response ;
+questionResponse : LPAREN STRING LPAREN questionType COMMA INT RPAREN RPAREN COLON response ; // resposne should have been '"' response '"', thats why only text
 
 questionType : 'TrueFalse'
              | 'ShortTextAnswer'
@@ -37,7 +37,7 @@ questionType : 'TrueFalse'
              | 'Date'
              | 'Time';
 
-response : booleanResponse
+response : booleanResponse // could have been only boolean
          | fraction
          | date
          | time
